@@ -1,329 +1,488 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHE SURVIVES: The Ultimate Woman's Guide to Anything</title>
-
-    <!-- SEO basics -->
-    <meta name="description" content="A brutally honest, actually-useful survival guide for women. Learn fire, water, shelter, urban survival, first aid, and self‑defense. Launch price: $19.97." />
-    <link rel="canonical" href="https://shesurvives.com/" />
-
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="product" />
-    <meta property="og:title" content="SHE SURVIVES: The Ultimate Woman's Guide to Anything" />
-    <meta property="og:description" content="The brutally honest survival guide for women. Limited launch price $19.97." />
-    <meta property="og:image" content="https://cdn1.genspark.ai/user-upload-image/5_generated/afacb270-73d2-44c0-b4b5-a233d4d6dcae" />
-    <meta property="og:url" content="https://shesurvives.com/" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Product schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "SHE SURVIVES: The Ultimate Woman's Guide to Anything",
-      "description": "A survival guide for women covering fire, water purification, shelters, urban survival, first aid, and self-defense.",
-      "image": "https://cdn1.genspark.ai/user-upload-image/5_generated/afacb270-73d2-44c0-b4b5-a233d4d6dcae",
-      "brand": {"@type": "Brand", "name": "SHE SURVIVES"},
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "19.97",
-        "availability": "https://schema.org/InStock",
-        "url": "https://gumroad.com/l/she-survives-guide"
-      }
-    }
-    </script>
-
-    <!-- Minimal, fast CSS framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-
-    <!-- Performance: preconnect to CDNs -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://gumroad.com" crossorigin>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Arial:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      :root {
-        --brand: #e91e63;
-        --brand-dark: #c2185b;
-        --accent: #ff6b6b;
-        --accent-2: #ff8c00;
-        --bg-hero: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff3838 100%);
-        --radius: 18px;
-      }
-
       body {
-        max-width: 960px;
+        max-width: 880px;
         margin: 0 auto;
-        padding: 24px clamp(16px, 4vw, 48px);
-        background: #fff;
-        color: #333;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        padding: 32px 80px;
+        position: relative;
+        box-sizing: border-box;
+        font-family: 'Georgia', serif;
         line-height: 1.6;
+        color: #333;
+        background: white;
       }
 
-      .hero {
+      .hero-section {
         text-align: center;
-        margin: 24px 0 16px;
-        padding: clamp(20px, 4vw, 48px);
-        background: var(--bg-hero);
-        color: #fff;
-        border-radius: var(--radius);
+        margin: 40px 0;
+        padding: 40px;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff3838 100%);
+        color: white;
+        border-radius: 15px;
       }
 
-      .hero h1 {
-        margin: 0 0 10px;
+      .main-headline {
+        font-family: 'Arial', sans-serif;
+        font-size: 36px;
         font-weight: 900;
-        letter-spacing: -0.02em;
+        color: white;
+        margin: 20px 0;
+        text-align: center;
+        letter-spacing: -1px;
         line-height: 1.1;
-        font-size: clamp(28px, 4.2vw, 44px);
       }
 
-      .subhead {
+      .sub-headline {
+        font-family: 'Georgia', serif;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.95);
+        margin: 25px 0;
+        text-align: center;
         font-style: italic;
-        font-size: clamp(16px, 1.9vw, 20px);
-        opacity: 0.95;
       }
 
-      .price-tag {
-        display: inline-block;
-        margin: 16px 0;
-        font-weight: 900;
-        font-size: clamp(20px, 2.6vw, 28px);
-        color: #ffd700;
-        background: rgba(255,255,255,.12);
-        padding: 10px 18px;
-        border-radius: 14px;
-        border: 2px solid rgba(255,255,255,.35);
+      .book-image {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        border: 1px solid #ddd;
       }
 
-      .cta {
-        display: inline-block;
-        background: linear-gradient(45deg, #ffd700, var(--accent-2));
-        color: #222;
+      .cta-button {
+        background: linear-gradient(45deg, #ffd700, #ff8c00);
+        color: #333;
+        padding: 18px 35px;
+        font-size: 18px;
         font-weight: 900;
         text-decoration: none;
-        padding: 14px 26px;
-        border-radius: 999px;
-        text-transform: uppercase;
-        letter-spacing: .06em;
+        display: inline-block;
+        margin: 20px 10px;
         border: none;
-        transition: transform .08s ease, filter .2s ease;
-      }
-      .cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
-      .cta:focus { outline: 3px solid #222; outline-offset: 2px; }
-
-      .block {
-        margin: 28px 0;
-        padding: clamp(16px, 2.6vw, 30px);
-        border-radius: var(--radius);
-      }
-
-      .problem { background: #ffefba; border-left: 6px solid var(--accent); }
-      .features { background: #e8f5e8; border: 2px solid #28a745; }
-      .lead { background: #fff2f2; border: 2px solid #dc3545; }
-      .bonus { background: #fff8e1; border-left: 4px solid #ff9800; }
-      .testimonials { background: #ffeaa7; }
-      .guarantee { background: #e2f3ff; border: 2px solid #007bff; text-align: center; }
-      .urgency { background: #ffebee; border: 2px dashed var(--brand); text-align: center; }
-      .trust { background: #f1f3f4; text-align: center; }
-      .payments { background: #f8f9fa; border: 1px solid #dee2e6; text-align: center; }
-
-      .section-title {
+        font-family: 'Arial', sans-serif;
         text-align: center;
+        border-radius: 25px;
         text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: .08em;
-        color: #2c3e50;
-        margin: 0 0 12px;
-        font-size: clamp(18px, 2.6vw, 24px);
+        letter-spacing: 1px;
       }
 
-      .feature-list { list-style: none; padding: 0; margin: 12px 0 0; }
-      .feature-list li {
-        background: rgba(255,255,255,.9);
-        margin: 10px 0;
-        padding: 12px 14px;
-        border-radius: 10px;
-        border-left: 4px solid var(--accent);
+      .price-text {
+        font-size: 28px;
+        font-weight: 900;
+        color: #ffd700;
+        margin: 25px 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 30px;
+        border-radius: 15px;
+        display: inline-block;
+        border: 2px solid rgba(255, 255, 255, 0.3);
       }
-      .feature-list li::marker { content: ""; }
-      .feature-list li::before { content: "✨  "; }
+
+      .problem-section {
+        background: #ffefba;
+        padding: 30px;
+        margin: 30px 0;
+        border-left: 6px solid #ff6b6b;
+        border-radius: 10px;
+      }
+
+      .features-section {
+        background: #e8f5e8;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 15px;
+        border: 2px solid #28a745;
+      }
+
+      .feature-list {
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 20px 0;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .feature-list li {
+        margin: 12px 0;
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        border-left: 4px solid #ff6b6b;
+      }
+
+      .feature-list li::before {
+        content: '✨ ';
+        margin-right: 10px;
+      }
+
+      .testimonial-section {
+        background: #ffeaa7;
+        padding: 40px;
+        margin: 40px 0;
+        border-radius: 20px;
+      }
 
       .testimonial {
         font-style: italic;
-        background: rgba(255,255,255,.92);
-        padding: 16px;
-        border-radius: 12px;
-        border-left: 4px solid var(--accent);
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 20px 0;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #ff6b6b;
       }
-      .author { text-align: right; font-weight: 600; color: #495057; margin: 2px 0 0; }
 
-      .footer { border-top: 1px solid #dee2e6; text-align: center; color: #666; font-size: 12px; padding: 20px 0 8px; }
+      .testimonial-author {
+        font-weight: bold;
+        color: #495057;
+        text-align: right;
+        margin-top: 10px;
+      }
 
-      .hero img { max-width: 220px; width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; }
+      .guarantee-section {
+        background: #e2f3ff;
+        padding: 25px;
+        margin: 25px 0;
+        text-align: center;
+        border: 2px solid #007bff;
+      }
 
-      /* Mobile tweaks */
-      @media (max-width: 640px) {
-        .cta { width: 100%; text-align: center; }
+      .guarantee-text {
+        font-size: 16px;
+        font-weight: bold;
+        color: #007bff;
+        margin: 15px 0;
+      }
+
+      .lead-magnet-section {
+        background: #fff2f2;
+        padding: 25px;
+        margin: 25px 0;
+        border: 2px solid #dc3545;
+      }
+
+      .bonus-section {
+        background: #fff8e1;
+        padding: 25px;
+        margin: 25px 0;
+        border-left: 4px solid #ff9800;
+      }
+
+      .section-header {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        color: #2c3e50;
+        margin: 30px 0 20px 0;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .urgency-section {
+        background: #ffebee;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+        border: 2px dashed #e91e63;
+      }
+
+      .trust-signals {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f1f3f4;
+      }
+
+      .payment-options {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
       }
     </style>
   </head>
   <body>
-    <header class="hero" role="banner">
-      <h1>🚨 BREAKING NEWS 🚨<br>You're Probably Going to Die in the Next Emergency<br><small>(But We Can Fix That... Maybe)</small></h1>
-      <p class="subhead">The brutally honest survival guide for women who think "roughing it" means staying at a hotel without room service</p>
+    <div class="hero-section">
+      <h1 class="main-headline">
+        🚨 BREAKING NEWS 🚨<br />You're Probably Going to Die in the Next Emergency<br />(But We Can Fix That... Maybe)
+      </h1>
+      <p class="sub-headline">
+        The brutally honest survival guide for women who think "roughing it" means staying at a hotel without room
+        service
+      </p>
       <img
         src="https://cdn1.genspark.ai/user-upload-image/5_generated/afacb270-73d2-44c0-b4b5-a233d4d6dcae"
-        alt="Cover mockup for SHE SURVIVES: The Ultimate Woman's Guide"
-        loading="lazy"
-        width="440" height="440"
+        alt="SHE SURVIVES: The Ultimate Woman's Guide"
+        class="book-image"
       />
-      <div class="price-tag" aria-label="Special launch price">Launch Price: $19.97</div><br>
-      <a class="cta" href="https://gumroad.com/l/she-survives-guide" rel="noopener" aria-label="Get the guide on Gumroad for $19.97">🔥 Get Your Guide Now</a>
-    </header>
+      <p class="price-text">Special Launch Price: Only $19.97</p>
+      <a href="https://gumroad.com/l/she-survives-guide" class="cta-button">🔥 Get Your Guide Now</a>
+    </div>
 
-    <section class="block problem" aria-labelledby="problem-title">
-      <h2 id="problem-title" class="section-title">😤 Let's Be Real: You're a Walking Disaster Movie</h2>
-      <p><strong>Harsh Truth #1:</strong> Right now, you're about as prepared for an emergency as a chocolate teapot. While you know 47 different Starbucks orders by heart, you couldn't start a fire if your life depended on it. (Spoiler: it might.)</p>
-      <p><strong>Harsh Truth #2:</strong> When the power goes out, you're googling "open a can without a can opener" on 2% battery. The villains are thriving.</p>
-      <p><strong>Harsh Truth #3:</strong> You're one flat tire away from starring in a tragic Netflix doc titled <em>She Seemed So Smart</em>.</p>
-      <p style="text-align:center; font-weight: 700; color:#e74c3c">But don't worry — we're here to save you from yourself. 🙄</p>
-    </section>
+    <div class="problem-section">
+      <h2 class="section-header">😤 Let's Be Real: You're a Walking Disaster Movie</h2>
+      <p>
+        <strong>Harsh Truth #1:</strong> Right now, you're about as prepared for an emergency as a chocolate teapot.
+        While you're over here knowing 47 different Starbucks orders by heart, you couldn't start a fire if your life
+        depended on it. (Spoiler alert: It might.)
+      </p>
+      <p>
+        <strong>Harsh Truth #2:</strong> When the power goes out, you become that person frantically googling "how to
+        open a can without a can opener" on your dying phone. Meanwhile, every horror movie villain in a 10-mile radius
+        is rubbing their hands together with glee.
+      </p>
+      <p>
+        <strong>Harsh Truth #3:</strong> You're one flat tire away from starring in your own tragic Netflix documentary
+        titled "She Seemed So Smart: The Sarah Johnson Story."
+      </p>
+      <p style="text-align: center; font-size: 18px; color: #e74c3c; font-weight: bold; margin: 25px 0">
+        But don't worry - we're here to save you from yourself. 🙄
+      </p>
+    </div>
 
-    <section class="block features" aria-labelledby="features-title">
-      <h2 id="features-title" class="section-title">💪 What You'll Learn (AKA: How to Stop Being Helpless)</h2>
+    <div class="features-section">
+      <h2 class="section-header">💪 What You'll Learn (AKA: How to Stop Being Helpless)</h2>
       <ul class="feature-list">
-        <li><strong>Start a fire without matches</strong> — crying is not a strategy.</li>
-        <li><strong>Find and purify water</strong> — DoorDash won't deliver during the apocalypse.</li>
-        <li><strong>Build real shelters</strong> — Instagram won't keep you warm.</li>
-        <li><strong>Navigate without GPS</strong> — for when your phone taps out.</li>
-        <li><strong>Urban survival</strong> — most emergencies happen in cities.</li>
-        <li><strong>Emergency food that doesn't suck</strong> — beyond stale purse crackers.</li>
-        <li><strong>First aid that works</strong> — practical, not pretend.</li>
-        <li><strong>Self-defense basics</strong> — 911 isn't always an option.</li>
-        <li><strong>How to not panic</strong> — keep your head, win the day.</li>
+        <li>
+          <strong>How to start a fire without matches</strong> - Because crying and hoping someone will save you is not
+          a strategy
+        </li>
+        <li>
+          <strong>Find and purify water</strong> - So you don't die of thirst while waiting for DoorDash to deliver in
+          the apocalypse
+        </li>
+        <li><strong>Build actual shelters</strong> - News flash: Your Instagram feed won't keep you warm at night</li>
+        <li>
+          <strong>Navigate without GPS</strong> - For when your phone dies and you realize you don't even know which way
+          is north (pathetic, really)
+        </li>
+        <li>
+          <strong>Urban survival skills</strong> - Because most emergencies happen in cities, not scenic mountain ranges
+        </li>
+        <li><strong>Emergency food that doesn't suck</strong> - Beyond the three crackers in your purse from 2019</li>
+        <li>
+          <strong>First aid that actually works</strong> - Kissing boo-boos better has limited effectiveness in real
+          emergencies
+        </li>
+        <li><strong>Self-defense techniques</strong> - Since "I'll just call 911" isn't always an option, sweetie</li>
+        <li>
+          <strong>How to not panic like a crazy person</strong> - Your emotional breakdowns won't solve anything
+          (shocking, we know)
+        </li>
       </ul>
 
-      <article class="block urgency" aria-label="Scenario practice">
-        <h3 style="color: var(--brand); margin:0 0 8px">Pop Quiz, Hotshot:</h3>
-        <p><strong>Scenario:</strong> Three hours into a blackout. 2% phone. No service. Sun is setting.</p>
-        <p><strong>Your plan:</strong> Cry and try retail therapy that doesn't work without power.</p>
-        <p><strong>Our plan:</strong> Do the right things in the right order like a competent adult.</p>
-      </article>
-
-      <div style="text-align:center">
-        <a class="cta" href="https://gumroad.com/l/she-survives-guide" rel="noopener">Save Yourself — $19.97</a>
-        <p style="font-size: 14px; color:#666; font-style: italic; margin-top:10px">Depending on others is getting old.</p>
-      </div>
-    </section>
-
-    <section class="block testimonials" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title" class="section-title">💬 Confessions From Formerly Helpless Women</h2>
-      <div class="testimonial">"I used to think 'survival skills' meant knowing which Whole Foods stayed open latest. Now I can start a fire. Still afraid of spiders, but at least I won't die in a blackout."<div class="author">— Sarah M., Reformed City Girl</div></div>
-      <div class="testimonial">"My plan was 'call my dad and cry.' Now I'm the friend people call in a crisis. Turns out competence is attractive."<div class="author">— Jennifer R., Former Damsel</div></div>
-      <div class="testimonial">"From lightbulb-challenged to water‑purifying, shelter‑building. My dating profile got an upgrade."<div class="author">— Maria L.</div></div>
-      <div class="testimonial">"Bought as a joke. Joke's on them. I'm still bougie, just harder to kill."<div class="author">— Ashley K.</div></div>
-    </section>
-
-    <!-- Lead magnet: Netlify-ready form (or swap action for Mailchimp/ConvertKit/Formspree) -->
-    <section class="block lead" aria-labelledby="lead-title">
-      <h2 id="lead-title" class="section-title">FREE Reality Check: "Am I Completely Screwed?" Assessment</h2>
-      <p>Grab the checklist to see how prepared you are. We'll email the printable PDF.</p>
-
-      <form name="lead-magnet" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Lead capture form">
-        <input type="hidden" name="form-name" value="lead-magnet" />
-        <p class="hidden" aria-hidden="true">
-          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      <div
+        style="background: #ffebee; padding: 20px; margin: 25px 0; border-left: 4px solid #e91e63; border-radius: 10px"
+      >
+        <h3 style="color: #e91e63; margin-top: 0">Pop Quiz, Hotshot:</h3>
+        <p>
+          <strong>Scenario:</strong> The power's been out for 3 hours. Your phone is at 2%. There's no cell service.
+          It's getting dark.
         </p>
-        <div class="grid">
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
-          </label>
-          <label>
-            <span>First name</span>
-            <input type="text" name="first_name" placeholder="Desi" autocomplete="given-name" />
-          </label>
-        </div>
-        <button class="cta" type="submit" aria-label="Get the free checklist">Get the Free Checklist</button>
-        <small style="display:block;margin-top:8px;color:#666">No spam, unsubscribe anytime.</small>
-      </form>
-
-      <div class="block" style="background:#fff3cd; border:1px solid #ffec99;">
-        <h3 style="margin:0 0 8px; color:#856404">Quick Self-Assessment</h3>
-        <ul>
-          <li>🔥 Start a fire without matches? <em>(No, luxury candles don’t count.)</em></li>
-          <li>💧 Purify water? <em>(Boiling ramen doesn’t count.)</em></li>
-          <li>🏠 Build a shelter? <em>(Pillow forts don’t count.)</em></li>
-          <li>🧭 Find north without a phone?</li>
-        </ul>
+        <p>
+          <strong>Your current plan:</strong> Probably involves crying and/or retail therapy that you can't actually do
+          because nothing works.
+        </p>
+        <p><strong>Our plan:</strong> Actually knowing what to do like a competent adult human being.</p>
       </div>
-    </section>
 
-    <section class="block bonus" aria-labelledby="bonus-title">
-      <h2 id="bonus-title" class="section-title">Limited Time Bonuses (Worth $47)</h2>
+      <div style="text-align: center; margin: 25px 0">
+        <a href="https://gumroad.com/l/she-survives-guide" class="cta-button">Save Yourself - $19.97</a>
+        <p style="font-size: 14px; color: #666; margin-top: 10px; font-style: italic">
+          (Because depending on others to rescue you is getting old)
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonial-section">
+      <h2 class="section-header">💬 Confessions From Formerly Helpless Women:</h2>
+      <div class="testimonial">
+        "I used to think 'survival skills' meant knowing which Whole Foods stayed open latest. Now I can actually start
+        a fire and my friends think I'm some kind of wilderness goddess. Plot twist: I'm still afraid of spiders, but at
+        least I won't die in a blackout."
+      </div>
+      <p class="testimonial-author">- Sarah M., Reformed City Girl</p>
+
+      <div class="testimonial">
+        "Before this guide, my emergency plan was 'call my dad and cry.' Now I'm the friend everyone wants with them in
+        a crisis. It's amazing how attractive competence is - who knew?"
+      </div>
+      <p class="testimonial-author">- Jennifer R., No Longer Completely Useless</p>
+
+      <div class="testimonial">
+        "I went from being the woman who couldn't change a lightbulb to someone who can purify water and build shelter.
+        My dating profile went from 'looking for someone to take care of me' to 'I can take care of myself, thanks.'"
+      </div>
+      <p class="testimonial-author">- Maria L., Recovered Damsel</p>
+
+      <div class="testimonial">
+        "Honestly, I bought this as a joke because my friends always tease me about being high-maintenance. Joke's on
+        them - I'm still high-maintenance, but now I'm high-maintenance AND capable of not dying in an emergency."
+      </div>
+      <p class="testimonial-author">- Ashley K., Bougie But Not Helpless</p>
+    </div>
+
+    <div class="lead-magnet-section">
+      <h2 class="section-header">FREE Reality Check: The "Am I Completely Screwed?" Assessment</h2>
+      <p>
+        Before you buy anything, let's establish just how unprepared you actually are. This free checklist will either
+        make you feel slightly better about yourself... or send you into a full-blown panic spiral.
+      </p>
+      <p style="font-weight: bold; color: #dc3545">(Spoiler: It's probably going to be the panic spiral.)</p>
+
+      <div style="background: #fff3cd; padding: 15px; margin: 15px 0; border-radius: 8px">
+        <h4 style="margin-top: 0; color: #856404">Quick Self-Assessment:</h4>
+        <p style="margin: 5px 0">
+          🔥 Can you start a fire without matches?
+          <span style="color: #dc3545">(No, your expensive candles don't count)</span>
+        </p>
+        <p style="margin: 5px 0">
+          💧 Do you know how to purify water? <span style="color: #dc3545">(Boiling ramen doesn't count)</span>
+        </p>
+        <p style="margin: 5px 0">
+          🏠 Can you build any kind of shelter?
+          <span style="color: #dc3545">(Pillow forts from childhood don't count)</span>
+        </p>
+        <p style="margin: 5px 0">
+          🧭 Do you know which way is north without your phone?
+          <span style="color: #dc3545">(Probably not, let's be honest)</span>
+        </p>
+      </div>
+
+      <p style="text-align: center; font-size: 16px; color: #e91e63; font-weight: bold">
+        If you answered "no" to any of these, you need help. Like, yesterday.
+      </p>
+    </div>
+
+    <div class="bonus-section">
+      <h2 class="section-header">Limited Time Bonuses (Worth $47)</h2>
+      <p>Order today and get these exclusive bonuses:</p>
       <ul>
         <li><strong>Bonus #1:</strong> Printable Emergency Contact Cards (Value: $15)</li>
-        <li><strong>Bonus #2:</strong> Urban Survival Quick Reference (Value: $17)</li>
-        <li><strong>Bonus #3:</strong> Essential Knots Video (Value: $15)</li>
+        <li><strong>Bonus #2:</strong> Urban Survival Quick Reference Guide (Value: $17)</li>
+        <li><strong>Bonus #3:</strong> Video Demonstration of Essential Knots (Value: $15)</li>
       </ul>
-      <p style="text-align:center"><strong>Total Value: $66.97 • Your Price Today: $19.97</strong></p>
-    </section>
+      <p style="text-align: center; margin: 20px 0">
+        <strong>Total Package Value: $66.97 - Your Price Today: Just $19.97</strong>
+      </p>
+    </div>
 
-    <section class="block guarantee" aria-labelledby="guarantee-title">
-      <h2 id="guarantee-title" class="section-title">30‑Day Money‑Back Guarantee</h2>
-      <p><strong>Love it or we refund it.</strong> If you don’t feel more confident and prepared after reading the guide, we’ll refund every penny. Try it risk‑free for 30 days.</p>
-      <p><a class="cta" href="https://gumroad.com/l/she-survives-guide" rel="noopener">Download Instantly — $19.97</a></p>
-    </section>
-
-    <section class="block urgency" aria-labelledby="urgency-title">
-      <h2 id="urgency-title" class="section-title">🚨 Reality Check Time</h2>
-      <p><strong>Translation:</strong> Waiting for rescue is not a plan. Skills are.</p>
-      <div class="block" style="background:#fff; border:2px solid var(--accent);">
-        <h3 style="margin:0 0 8px; color: var(--brand)">Your Choice</h3>
-        <p><strong>Option A:</strong> Stay the one who calls for help when a dashboard light turns on.</p>
-        <p><strong>Option B:</strong> Become the woman other people call when <em>they</em> need help.</p>
-        <p style="color:#666; font-style: italic; margin:8px 0 0">Hint: Option B gets more respect, and better stories.</p>
+    <div class="guarantee-section">
+      <h2 class="section-header">30-Day Money-Back Guarantee</h2>
+      <p class="guarantee-text">
+        If you don't feel more confident and prepared after reading this guide, we'll refund every penny.
+      </p>
+      <p>
+        That's how confident we are that SHE SURVIVES will change how you think about your own capabilities. Try it
+        risk-free for 30 days.
+      </p>
+      <div style="margin: 25px 0">
+        <a href="https://gumroad.com/l/she-survives-guide" class="cta-button">Download Instantly - $19.97</a>
       </div>
-      <a class="cta" href="https://gumroad.com/l/she-survives-guide" rel="noopener">Fine, I’ll Stop Being Helpless — $19.97</a>
-    </section>
+    </div>
 
-    <section class="block trust" aria-labelledby="trust-title">
-      <h2 id="trust-title" class="section-title">Why You Can Trust This Guide</h2>
-      <p>✓ Written by a certified survival instructor with 10+ years of field experience</p>
-      <p>✓ Tested by real women in real scenarios</p>
-      <p>✓ Based on proven techniques used by military and emergency services</p>
-      <p>✓ Updated for modern tools and urban realities</p>
-      <p>✓ Backed by a 30‑day satisfaction guarantee</p>
-      <div style="margin-top:16px">
-        <p><strong>Secure Payment</strong></p>
-        <p>💳 Major cards | 🏦 PayPal | 💰 Apple Pay | 🛡️ Google Pay • 🔒 SSL checkout • ✅ Instant digital delivery</p>
+    <div class="urgency-section">
+      <h2 style="color: #e91e63; margin: 15px 0">🚨 REALITY CHECK TIME 🚨</h2>
+      <p><strong>Statistics that should terrify you:</strong></p>
+      <ul style="text-align: left; max-width: 500px; margin: 0 auto">
+        <li>97% of people can't survive 3 days without modern conveniences</li>
+        <li>The average person panics within 6 minutes of a real emergency</li>
+        <li>Most women rely entirely on others for basic survival needs</li>
+        <li>Emergency services are often overwhelmed and can't reach everyone</li>
+      </ul>
+      <p style="font-size: 16px; margin: 20px 0; color: #e91e63">
+        <strong>Translation: You're basically a sitting duck with a designer handbag.</strong>
+      </p>
+      <p>But hey, at least you'll look cute while waiting for rescue that might never come! 💅</p>
+
+      <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border: 2px solid #ffc107; border-radius: 10px">
+        <h3 style="color: #856404; margin-top: 0">The Uncomfortable Truth:</h3>
+        <p>
+          Every day you don't learn these skills is another day you're gambling with your life. And honey, the house
+          always wins.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <section class="block payments" aria-labelledby="payment-title">
-      <h2 id="payment-title" class="section-title">Multiple Payment Options</h2>
-      <p><a class="cta" href="https://gumroad.com/l/she-survives-guide" rel="noopener">Pay with Gumroad</a></p>
-      <p style="font-size:12px; color:#666"><em>We don’t store payment data.</em></p>
-    </section>
+    <div class="trust-signals">
+      <h2 class="section-header">Why You Can Trust This Guide</h2>
+      <p>✓ Written by certified survival instructor with 10+ years experience</p>
+      <p>✓ Field-tested by real women in real situations</p>
+      <p>✓ Based on proven techniques from military and emergency services</p>
+      <p>✓ Updated with modern tools and urban scenarios</p>
+      <p>✓ Backed by our 30-day satisfaction guarantee</p>
 
-    <footer class="footer">
-      <p>Questions? Email <a href="mailto:support@shesurvivals.com">support@shesurvivals.com</a><br>© <span id="year"></span> SHE SURVIVES. All rights reserved.</p>
-    </footer>
+      <div style="margin: 20px 0">
+        <p><strong>Secure Payment Processing</strong></p>
+        <p>💳 All major credit cards accepted | 🔒 SSL encrypted checkout | ✅ Instant digital delivery</p>
+      </div>
+    </div>
 
-    <script>
-      // dynamic year and very light outbound click tracking
-      document.getElementById('year').textContent = new Date().getFullYear();
-      for (const a of document.querySelectorAll('a[href*="gumroad.com"]')) {
-        a.addEventListener('click', () => {
-          try { localStorage.setItem('last_cta_click', String(Date.now())); } catch {}
-        });
-      }
-    </script>
+    <div class="payment-options">
+      <h2 class="section-header">Multiple Payment Options Available</h2>
+      <p>Choose your preferred payment method:</p>
+      <p><a href="https://gumroad.com/l/she-survives-guide" class="cta-button">Pay with Gumroad</a></p>
+      <p style="margin: 15px 0">Or select your preferred option at checkout:</p>
+      <p>💳 Credit/Debit Card | 🏦 PayPal | 💰 Apple Pay | 🛡️ Google Pay</p>
+      <p style="font-size: 12px; color: #666">
+        <em>All transactions are processed securely. Your payment information is never stored on our servers.</em>
+      </p>
+    </div>
 
-    <!-- Optional: Google Analytics / Meta Pixel can be dropped in here when you’re ready. -->
+    <div style="text-align: center; margin: 30px 0; padding: 25px; background: #ffebee; border: 2px solid #e91e63">
+      <h2 style="color: #e91e63; margin-bottom: 20px">Final Wake-Up Call: Stop Being Helpless</h2>
+      <p style="font-size: 16px; margin: 20px 0; color: #333">
+        Look, we could sugarcoat this, but you're a grown woman. You deserve the truth.
+      </p>
+      <p style="font-size: 14px; margin: 15px 0">
+        <strong>Right now, you're basically a very expensive pet that needs constant care and protection.</strong>
+      </p>
+      <p style="font-size: 14px; margin: 15px 0">You can stay that way and hope nothing bad ever happens...</p>
+      <p style="font-size: 14px; margin: 15px 0; color: #e91e63">
+        <strong>OR you can spend $19.97 and learn to save your own damn self.</strong>
+      </p>
+
+      <div style="background: #fff; padding: 15px; margin: 15px 0; border-radius: 8px; border: 2px solid #ff6b6b">
+        <h3 style="color: #e91e63; margin-top: 0">Your Choice:</h3>
+        <p style="margin: 8px 0">
+          <strong>Option A:</strong> Continue being the woman who calls her dad when her car makes a weird noise
+        </p>
+        <p style="margin: 8px 0"><strong>Option B:</strong> Become the woman other people call when THEY need help</p>
+        <p style="color: #666; font-style: italic; margin-top: 10px">
+          Hint: Option B gets you a lot more respect (and dates).
+        </p>
+      </div>
+
+      <a href="https://gumroad.com/l/she-survives-guide" class="cta-button" style="font-size: 20px; padding: 20px 40px"
+        >Fine, I'll Stop Being Helpless - $19.97</a
+      >
+      <p style="font-size: 11px; color: #666; margin-top: 15px">
+        30-day guarantee because we're confident you'll actually use this<br />(Unlike that gym membership you never
+        use)
+      </p>
+
+      <p style="font-size: 12px; color: #e91e63; margin-top: 15px; font-weight: bold">
+        P.S. - Your future self will thank you. Your helpless current self... well, she needs to go.
+      </p>
+    </div>
+
+    <div style="border-top: 1px solid #dee2e6; padding: 25px 0; text-align: center; color: #666">
+      <p style="font-size: 12px">
+        Questions? Contact us at support@shesurvivals.com<br />© 2024 SHE SURVIVES. All rights reserved.
+      </p>
+    </div>
   </body>
 </html>
